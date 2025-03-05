@@ -6,9 +6,9 @@ This project aims to develop a simplified nerve bundle model using the **NEURON*
 The model will begin with a **single nerve fiber** and progressively advance to a more complex **nerve bundle**. The stimulation methodology transitions from **intracellular** electrode to extracellular electrode (only considering the **distance** between electrode and fiber) and ultimately to extracellular electrode (considering both distance and **membrane area**). Recording techniques will evolve from **intracellular** electrode to **extracellular** electrode.
 
 ## 2. Scope
-For the nerve cell structure, the model will focus on **Axon**, omitting soma, dendritic structures, and neurotransmitter-mediated synaptic transmission. And this model will only consider the topology of the nerve, and ignore the anatomical shape.
+The scope of this project includes a topological representation of peripheral nerves as a linear single and multi-axon group of multi diameters, myelinated and unmyelinated fibers. This comprises stimulation waveforms, locations, recording modalities and sites. Soma, dendrites and synapses are out of scope. <br/>
 
-This model will take into account a **general fiber bundle** without considering a specific part of the human body or an animal. And the stimulus is a **universal electrode** and does not correspond to a specific device.
+
 
 ## 3. Procedure
 The project is divided into five distinct phases:<br/>
@@ -42,25 +42,25 @@ The model will be implemented using the **hoc** and **python** programming langu
 
 ## 6. Stimulation
 ### 6.1 Waveform
-The simulation will incorporate different types of waveforms, including:
-- **Single pulse stimulation**: A single short-duration stimulus.
-- **Biphasic pulse stimulation**: Two-phase waveform for reducing charge accumulation.
+The simulation will incorporate different types of waveforms, including:<br/>
+- **Single pulse stimulation**: A single short-duration stimulus.<br/>
+- **Biphasic pulse stimulation**: Biphasic waveform with active and passive charge receovery.
 
 ### 6.2 Parameters
-Each stimulation will be configured with different parameters:
-- **Amplitude**: 0mA to 5mA
-- **Duration**: 0 us to 2, 000 us
-- **Waveform Type**: Square pulse, Biphasic pulse, Sinusoidal
-- **Electrode-fiber distance**: 1 to 20um
-- **Fiber diameter**: 0.2 to 1.5um
+Each stimulation will be configured with different parameters:<br/>
+- **Amplitude**: 0 mA to 5mA<br/>
+- **Duration**: 0 µs to 2,000 µs<br/>
+- **Waveform Type**: Square pulse, Biphasic pulse, Sinusoidal<br/>
+- **Electrode-fiber distance**: 1 to 20 µm<br/>
+- **Fiber diameter**: 0.2 to 1.5 µm<br/>
 
 ## 7. Recording
-- **Intracellular electrode**: Measures intracellular potential changes.
+- **Intracellular electrode**: PatchClamp intracellular potential changes.
 - **Extracellular electrode**: Measures the extracellular potential changes.
-- **Compound action potential**: Sum the action potentials of different nerve fibers.
+- **Compound action potential**: Sum the synchronos action potentials of different nerve fibers.
 
 ## 8. Outcome
-The expected results from this project include:
-- A nerve boundle model built with hoc file.
-- Some figures and animations which show the compound action potential.
+The expected results from this project include:<br/>
+- A nerve boundle model built with hoc file.<br/>
+- Some figures and animations which show the compound action potential.<br/>
 - A document show how to use the model.
