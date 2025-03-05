@@ -51,9 +51,8 @@ Each stimulation will be configured with different parameters:
 - **Amplitude**: 0mA to 5mA
 - **Duration**: 0 us to 2, 000 us
 - **Waveform Type**: Square pulse, Biphasic pulse, Sinusoidal
-- **Electrode-fiber distance**:
-- **Fiber diameter**:
-- **Charge density**:
+- **Electrode-fiber distance**: 1 to 20um
+- **Fiber diameter**: 0.2 to 1.5um
 
 ## 7. Recording
 - **Intracellular electrode**: Measures intracellular potential changes.
