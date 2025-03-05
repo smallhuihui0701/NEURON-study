@@ -11,21 +11,21 @@ For the nerve cell structure, the model will focus on **Axon**, omitting soma, d
 This model will take into account a **general fiber bundle** without considering a specific part of the human body or an animal. And the stimulus is a **universal electrode** and does not correspond to a specific device.
 
 ## 3. Procedure
-The project is divided into five distinct phases:
-- **3.1 Phase I**: Single neuron fiber, stimulation and recording via intracellular electrode.
-- **3.2 Phase II**: Single neuron fiber, stimulation via extracellular electrode (considering distance), recording via intracellular electrode.
-- **3.3 Phase III**: Single neuron fiber, stimulation via extracellular electrode, recording via extracellular electrode.
-- **3.4 Phase IV**: Nerve fiber bundle (considering fiber diameter variability), stimulation via extracellular electrode, recording via extracellular electrode.
-- **3.5 Phase V**: Nerve fiber bundle, stimulation via extracellular electrode (considering charge density to each fiber), recording via extracellular electrode.
+The project is divided into five distinct phases:<br/>
+- **3.1 Phase I**: Single neuron fiber, stimulation and recording via intracellular electrode.<br/>
+- **3.2 Phase II**: Single neuron fiber, stimulation via extracellular electrode (considering distance), recording via intracellular electrode.<br/>
+- **3.3 Phase III**: Single neuron fiber, stimulation via extracellular electrode, recording via extracellular electrode.<br/>
+- **3.4 Phase IV**: Nerve fiber bundle (considering fiber diameter variability), stimulation via extracellular electrode, recording via extracellular electrode.<br/>
+- **3.5 Phase V**: Nerve fiber bundle, stimulation via extracellular electrode (considering charge density to each fiber), recording via extracellular electrode.<br/>
 
 ## 4. Schedule
 |Procedure|Nerve|Stimulation|Record|Date|
 |-|-|-|-|-|
-|Phase I|Single|Intracellular|Intracellular|2025.03.05|
-|Phase II|Single|Extracellular (distance)|Intracellular|2025.03.07|
-|Phase III|Single|Extracellular (distance)|Extracellular|2025.03.11|
-|Phase IV|Multiple|Extracellular (distance)|Extracellular|2025.03.12|
-|Phase V|Multiple|Extracellular (charge density)|Extracellular|2025.03.13|
+|Phase I|Single|Intracellular|Intracellular|2025.03.05|<br/>
+|Phase II|Single|Extracellular (distance)|Intracellular|2025.03.07|<br/>
+|Phase III|Single|Extracellular (distance)|Extracellular|2025.03.11|<br/>
+|Phase IV|Multiple|Extracellular (distance)|Extracellular|2025.03.12|<br/>
+|Phase V|Multiple|Extracellular (charge density)|Extracellular|2025.03.13|<br/>
 
 ![alt text](PhaseI-III.png)
 ![alt text](PhaseIV.png)
