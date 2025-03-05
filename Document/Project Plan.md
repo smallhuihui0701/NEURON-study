@@ -32,7 +32,7 @@ The project is divided into five distinct phases:<br/>
 ![alt text](PhaseV.png)
 
 ## 5. Implementation
-### 5.1 Programming Language
+### 5.1 Programming Languages
 The model will be implemented using the **hoc** and **python** programming language.
 
 ### 5.2 File Architecture
