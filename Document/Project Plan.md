@@ -21,11 +21,11 @@ The project is divided into five distinct phases:<br/>
 ## 4. Schedule
 |Procedure|Nerve|Stimulation|Record|Date|
 |-|-|-|-|-|
-|Phase I|Single|Intracellular|Intracellular|2025.03.05|
-|Phase II|Single|Extracellular (distance)|Intracellular|2025.03.07|
-|Phase III|Single|Extracellular (distance)|Extracellular|2025.03.11|
-|Phase IV|Multiple|Extracellular (distance)|Extracellular|2025.03.12|
-|Phase V|Multiple|Extracellular (charge density)|Extracellular|2025.03.13|
+|Phase I|Single|Intracellular|Intracellular|2025.03.05|<br/>
+|Phase II|Single|Extracellular (distance)|Intracellular|2025.03.07|<br/>
+|Phase III|Single|Extracellular (distance)|Extracellular|2025.03.11|<br/>
+|Phase IV|Multiple|Extracellular (distance)|Extracellular|2025.03.12|<br/>
+|Phase V|Multiple|Extracellular (charge density)|Extracellular|2025.03.13|<br/>
 
 ![alt text](PhaseI-III.png)
 ![alt text](PhaseIV.png)
