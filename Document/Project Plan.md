@@ -42,7 +42,7 @@ The model will be implemented using the **hoc** and **python** programming langu
 
 ## 6. Stimulation
 ### 6.1 Waveform
-The simulation will incorporate different types of waveforms, including:<br/>
+The simulation will incorporate different waveforms, including:<br/>
 - **Single pulse stimulation**: A single short-duration stimulus.<br/>
 - **Biphasic pulse stimulation**: Biphasic waveform with active and passive charge receovery.
 
