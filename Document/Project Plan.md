@@ -55,8 +55,9 @@ Each stimulation will be configured with different parameters:<br/>
 - **Fiber diameter**: 0.2 to 1.5 µm<br/>
 
 ## 7. Recording
-- **Intracellular electrode**: PatchClamp intracellular potential changes.
-- **Extracellular electrode**: Measures the extracellular potential changes.
+Rercording will start from a single fiber axon and single action potential AP to multi-fiber model compound ation potential CAP.<br/>
+- **Intracellular electrode**: PatchClamp intracellular potential changes.<br/>
+- **Extracellular electrode**: Measures the extracellular potential changes.<br/>
 - **Compound action potential**: Sum the synchronos action potentials of different nerve fibers.
 
 ## 8. Outcome
