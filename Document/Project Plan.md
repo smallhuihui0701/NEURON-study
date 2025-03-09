@@ -19,8 +19,8 @@ The project is divided into five distinct phases:<br/>
 - **3.5 Phase V**: Nerve fiber bundle, stimulation via extracellular electrode (considering charge density to each fiber), recording via extracellular electrode.<br/>
 
 ## 4. Schedule
-|Procedure|Nerve|Stimulation|Record|Date|
-|-|-|-|-|-|
+|Procedure|Nerve|Stimulation|Record|Date|.<br/>
+|-|-|-|-|-|.<br/>
 |Phase I|Single|Intracellular|Intracellular|2025.03.05|<br/>
 |Phase II|Single|Extracellular (distance)|Intracellular|2025.03.07|<br/>
 |Phase III|Single|Extracellular (distance)|Extracellular|2025.03.11|<br/>
@@ -33,7 +33,7 @@ The project is divided into five distinct phases:<br/>
 
 ## 5. Implementation
 ### 5.1 Programming Languages
-The model will be implemented using the **hoc** and **python** programming language.
+The model will be implemented using the **hoc** and **Python** programming language.
 
 ### 5.2 File Architecture
 - **Topology**: Definition of the modeled nerve fiber and nerve bundle structures.
