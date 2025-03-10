@@ -1,0 +1,252 @@
+{load_file("nrngui.hoc")}
+objectvar save_window_, rvp_
+objectvar scene_vector_[10]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+{pwman_place(0,0,0)}
+
+//Begin CellBuild[0]
+{
+load_file("celbild.hoc", "CellBuild")
+}
+{ocbox_ = new CellBuild(1)}
+{object_push(ocbox_)}
+{
+version(5.7)
+continuous = 1
+}
+{object_push(topol)}
+{
+first = 0
+slist.remove_all()
+sname = "axon"
+objref tobj
+}
+{
+tobj = new CellBuildSection("axon",0, 0, tobj, 0) slist.append(tobj)
+  tobj.position(-97.9757,5.37109,90,0) tobj.lx=-14.1701 tobj.ly=-1.91634 tobj.i3d=0
+all_init()
+}
+for i=0, slist.count-1 {slist.object(i).rdses()}
+{object_pop()}
+{
+}
+{object_push(subsets)}
+{first = 0}
+{ tobj = snlist.object(0)}
+{consist()}
+{object_pop()}
+{
+}
+{object_push(geom)}
+{
+first = 0
+tobj = new GeoSpec(0, bild.subsets.snlist.object(0))
+for i=0, 0 {tobj.snlist.list.object(i).ldiaminfo.x[0] = fscan()}}
+20000
+{
+bild.subsets.snlist.object(0).geo.append(tobj)
+tobj = new GeoSpec(1, bild.subsets.snlist.object(0))
+for i=0, 0 {tobj.snlist.list.object(i).ldiaminfo.x[1] = fscan()}}
+100
+{
+bild.subsets.snlist.object(0).geo.append(tobj)
+tobj = new GeoSpec(6)
+tobj.value = 43
+bild.subsets.snlist.object(0).geo.append(tobj)
+set_default()
+}
+{object_pop()}
+{
+}
+{object_push(memb)}
+{first=0}
+{
+tobj = new MechanismStandard("hh")
+tobj.set("gnabar_hh", 0.12, 0)
+tobj.set("gkbar_hh", 0.036, 0)
+tobj.set("gl_hh", 0.0003, 0)
+tobj.set("el_hh", -54.3, 0)
+tobj = new MStanWrap(tobj, 1)
+bild.subsets.snlist.object(0).ml.append(tobj)
+}
+{object_pop()}
+{
+}
+{object_push(manage)}
+{
+first = 0
+classname = "Cell"
+etop=1 esub=1 egeom=1 emem=1
+itop=1 isub=0 igeom=0 imem=0
+bild.topol.names_off = 0
+bild.topol.circles_off = 0
+output_index = 0  output_x = 1
+thresh = 10
+}
+{object_pop()}
+{
+cexport()
+}
+{object_pop()}
+{
+save_window_=ocbox_.gtopol
+save_window_.size(-200,200,-150,150)
+scene_vector_[2] = save_window_
+ocbox_.gtopol = save_window_
+save_window_.save_name("ocbox_.gtopol")
+}
+{
+ocbox_.map("CellBuild[0]", 440, 39, 694.8, 359.1)
+}
+objref ocbox_
+//End CellBuild[0]
+
+
+//Begin PointProcessManager
+{
+load_file("pointman.hoc")
+}
+{
+axon ocbox_ = new PointProcessManager(0)
+}
+{object_push(ocbox_)}
+{
+mt.select("IClamp") i = mt.selected()
+ms[i] = new MechanismStandard("IClamp")
+ms[i].set("del", 1, 0)
+ms[i].set("dur", 1, 0)
+ms[i].set("amp", -70, 0)
+mt.select("IClamp") i = mt.selected() maction(i)
+hoc_ac_ = 0
+sec.sec move() d1.flip_to(0)
+}
+{object_pop() doNotify()}
+{
+ocbox_ = ocbox_.v1
+ocbox_.map("PointProcessManager", 519, 494, 207.9, 364.5)
+}
+objref ocbox_
+//End PointProcessManager
+
+{
+xpanel("RunControl", 0)
+v_init = -65
+xvalue("Init","v_init", 1,"stdinit()", 1, 1 )
+xbutton("Init & Run","run()")
+xbutton("Stop","stoprun=1")
+runStopAt = 5
+xvalue("Continue til","runStopAt", 1,"{continuerun(runStopAt) stoprun=1}", 1, 1 )
+runStopIn = 1
+xvalue("Continue for","runStopIn", 1,"{continuerun(t + runStopIn) stoprun=1}", 1, 1 )
+xbutton("Single Step","steprun()")
+t = 11.35
+xvalue("t","t", 2 )
+tstop = 20
+xvalue("Tstop","tstop", 1,"tstop_changed()", 0, 1 )
+dt = 0.025
+xvalue("dt","dt", 1,"setdt()", 0, 1 )
+steps_per_ms = 40
+xvalue("Points plotted/ms","steps_per_ms", 1,"setdt()", 0, 1 )
+screen_update_invl = 0.05
+xvalue("Scrn update invl","screen_update_invl", 1,"", 0, 1 )
+realtime = 7.89
+xvalue("Real Time","realtime", 0,"", 0, 1 )
+xpanel(68,324)
+}
+
+//Begin Movie Run
+{
+movie_frame_dur_ = 0.01
+
+movierunpanel(0)
+ocbox_ = movierunbox
+ocbox_.map("Movie Run", 69, 780, 279.9, 152.1)
+}
+objref ocbox_
+//End Movie Run
+
+{
+save_window_ = new PlotShape(0)
+save_window_.size(688.265,19107.7,-9494.86,8934.42)
+save_window_.variable("n_hh")
+scene_vector_[4] = save_window_
+{save_window_.view(688.265, -9494.86, 18419.4, 18429.3, 820, 540, 187.2, 186.4)}
+fast_flush_list.append(save_window_)
+save_window_.save_name("fast_flush_list.")
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,20,-80,40)
+scene_vector_[5] = save_window_
+{save_window_.view(0, -80, 20, 120, 985, 374, 286.2, 186.4)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addexpr("v(.5)", 1, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,20,0,200)
+scene_vector_[6] = save_window_
+{save_window_.view(0, 0, 20, 200, 1380, 129, 286.2, 186.4)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addvar("IClamp[0].i", 1, 1, 0.8, 0.9, 2)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,20000,0.05,0.6)
+scene_vector_[7] = save_window_
+{save_window_.view(0, 0.05, 20000, 0.55, 124, 124, 293.4, 193.6)}
+flush_list.append(save_window_)
+save_window_.save_name("flush_list.")
+objectvar rvp_
+rvp_ = new RangeVarPlot("m_hh")
+axon rvp_.begin(0)
+axon rvp_.end(1)
+rvp_.origin(0)
+save_window_.addobject(rvp_, 2, 1, 0.806135, 0.830269)
+objectvar rvp_
+rvp_ = new RangeVarPlot("h_hh")
+axon rvp_.begin(0)
+axon rvp_.end(1)
+rvp_.origin(0)
+save_window_.addobject(rvp_, 3, 1, 0.803068, 0.746591)
+objectvar rvp_
+rvp_ = new RangeVarPlot("n_hh")
+axon rvp_.begin(0)
+axon rvp_.end(1)
+rvp_.origin(0)
+save_window_.addobject(rvp_, 4, 1, 0.8, 0.9)
+}
+{
+save_window_ = new PlotShape(0)
+save_window_.size(688.266,19107.6,-9489.92,8929.43)
+save_window_.variable("gk_hh")
+scene_vector_[8] = save_window_
+{save_window_.view(688.266, -9489.92, 18419.4, 18419.4, 156, 156, 193.5, 193.6)}
+fast_flush_list.append(save_window_)
+save_window_.save_name("fast_flush_list.")
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,20000,1e-05,0.00037)
+scene_vector_[9] = save_window_
+{save_window_.view(0, 1e-05, 20000, 0.00036, 187, 187, 293.4, 193.6)}
+flush_list.append(save_window_)
+save_window_.save_name("flush_list.")
+objectvar rvp_
+rvp_ = new RangeVarPlot("gna_hh")
+axon rvp_.begin(0)
+axon rvp_.end(1)
+rvp_.origin(0)
+save_window_.addobject(rvp_, 2, 1, 0.81227, 0.844215)
+objectvar rvp_
+rvp_ = new RangeVarPlot("gk_hh")
+axon rvp_.begin(0)
+axon rvp_.end(1)
+rvp_.origin(0)
+save_window_.addobject(rvp_, 3, 1, 0.8, 0.9)
+}
+objectvar scene_vector_[1]
+{doNotify()}
